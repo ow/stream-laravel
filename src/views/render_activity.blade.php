@@ -12,9 +12,4 @@
             @include("/activity.{$activity['verb']}", ['activity'=>$activity])
         @endif
     @endif
-@else
-    {{ '' }}
-    @php
-        \Log::warning('The activity could not be rendered, the following field/refs could not be enriched:', $activity->getNotEnrichedData());
-    @endphp
 @endif
