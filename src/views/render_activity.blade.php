@@ -14,5 +14,7 @@
     @endif
 @else
     {{ '' }}
-    Log::warning('The activity could not be rendered, the following field/refs could not be enriched:', $activity->getNotEnrichedData());
+    @php
+        \Log::warning('The activity could not be rendered, the following field/refs could not be enriched:', $activity->getNotEnrichedData());
+    @endphp
 @endif
